@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Animation
+        </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
+            body {
+                background-image: linear-gradient(blue,rgb(231, 2, 2));
+                background-repeat: no-repeat;
+            }
+           .Container {
+            /* border: 2px solid; */
+            width: 350px;
+            height: 400px;
+            margin: 150px auto;
+            /* background-color: #fff; */
+            border-radius: 20px;
+           }
+           .car {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bolder;
+            color: black;
+            margin-top: 30px;
+           }
+           .Container ul li {
+            margin: 15px;
+            padding: 5px;
+            list-style: none;
+            justify-content: center;
+            position: relative;
+            left:-7px;
+            top: 10px;
+           }
+           .bar {
+            margin: 18px;
+            position: relative;
+            left: 35px;
+            font-size: 13px;
+            color: #032146;
+            font-weight: bold;
+           }
+           .child {
+            border: 1px solid rgb(147, 167, 175);
+            width:270px;
+            text-align: center;
+            font-style: italic;
+            color: #032146;
+            font-weight: bold;
+            margin-left: 40px;
+            border-radius: 5px;
+            cursor: pointer;
+           }
+           h6 {
+            font-size: 14px;
+            margin-top: 30px;
+            text-align: center;
+            color: darkblue;
+           }
+           /* Animation */
+           @property --angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;    
+           }
+           .Container {
+            width: 350px;
+            height: 400px;
+            position: relative;
+            padding: 4px;
+           }
+           .Container::before,
+           .Container::after {
+            content: "";
+            position: absolute;
+            inset: -0.2rem;
+            z-index: -1;
+            background: linear-gradient(var(--angle),
+            #032146,#c3f2ff,#b00);
+            animation: rotate 10s linear infinite;
+            border-radius: 20px;
+           }
+           .Container::after {
+            filter: blur(10px);
+           }
+           @keyframes rotate {
+            0% {--angle : 0deg; }
+            100% { --angle : 360deg;
+            }
+           }
+           marquee {
+            font-size: 23px;
+            color: #000000;
+            font-weight: bold;
+           }
+        </style>
+    </head>
+    <body>
+        <marquee>Welcome Every one</marquee>
+        <div class="Container">
+            <p class="car"> 
+                Login
+            </p>
+            <ul>
+                <li>
+                    <input type="text" class="form-control" placeholder="Enter Id" id="user Id"> 
+                </li>
+                <li>
+                    <input type="password" class="form-control" placeholder="Enter Pwd" id="user Pwd">
+                </li>
+            </ul>
+            <p class="bar">
+                 Forget password?
+            </p>
+            <div class="child">
+                Login
+            </div>
+            <h6>Don't have on account?
+                <a href="#"> SinUp</a>
+            </h6>
+        </div>
+
+        <script>
+
+            
+            
+
+         </script>
+
+    </body>
+</html>
